@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteControl - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 flex items-center justify-center min-h-screen">
+    <div class="login-container bg-slate-800 rounded-lg shadow-lg p-8 w-full max-w-md mx-auto">
+        <div class="text-center mb-8">
+            <div class="flex justify-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/2285/2285537.png" alt="EliteControl Logo" class="w-16 h-16">
+            </div>
+            <h1 class="text-3xl font-bold text-white">EliteControl</h1>
+            <p class="text-slate-400">Seu sistema de gestão inteligente</p>
+        </div>
+
+        <form id="loginForm" class="space-y-6">
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <i class="fas fa-envelope text-slate-400"></i>
+                    </span>
+                    <input type="email" id="email" name="email" class="form-input pl-10" placeholder="admin@elitecontrol.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Senha</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <i class="fas fa-lock text-slate-400"></i>
+                    </span>
+                    <input type="password" id="password" name="password" class="form-input pl-10" placeholder="••••••" required>
+                </div>
+            </div>
+
+            <div id="loginErrorMessage" class="bg-red-900 text-white p-3 rounded-md text-center hidden"></div>
+
+            <button type="submit" class="btn-primary w-full">Entrar</button>
+        </form>
+
+        <p class="text-center text-slate-500 text-sm mt-8">© 2025 EliteControl. Todos os direitos reservados.</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/elitecontrol-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
